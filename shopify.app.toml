@@ -1,6 +1,25 @@
 # This file stores configurations for your Shopify app.
 
-scopes = "write_products"
+client_id = "c294c7deee4ccc6e07d8acdf83e681ed"
+application_url = "https://simple-qr-generator.pfplapp.com/"
+embedded = true
+name = "Qgen"
+handle = "qr-generator"
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-e95546ec.myshopify.com"
+include_config_on_deploy = true
+
+[auth]
+redirect_urls = [
+  "https://simple-qr-generator.pfplapp.com/auth/callback",
+  "https://simple-qr-generator.pfplapp.com/auth/shopify/callback",
+  "https://simple-qr-generator.pfplapp.com/api/auth/callback",
+  "https://simple-qr-generator.pfplapp.com/api/auth/oauth/callback",
+]
+
+scopes = "write_products,read_products"
 
 [webhooks]
 api_version = "2024-10"
